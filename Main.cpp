@@ -15,14 +15,14 @@ int Menu() {
             if (cin.fail()) {
                 cin.clear();
                 cin.ignore();
-                throw invalidInput = true;
+                throw true;
             }
             else if ((userInput > 3) || (userInput < 1)) {
                 cout << "Invalid Menu Selection" << endl;
                 invalidInput = true;
             }
         }
-        catch(bool invalidInput) {
+        catch(bool error) {
             cout << "Invalid Input" << endl;
             invalidInput = true;
         }
@@ -183,11 +183,14 @@ int main() {
                     try {
                         cout << "Enter Modern number to be translated: ";
                         cin >> userModern;
+                        if (userModern < 1) {
+                            throw true;
+                        }
                         if (cin.fail()) {    
                             throw true;
                         }
                     }
-                    catch(bool error) {
+                    catch(bool invalidInput) {
                         cout << "Invalid Input" << endl;
                         cin.clear();
                         cin.ignore();
