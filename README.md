@@ -9,7 +9,9 @@
 
 ## modernToRoman Function info:
   Last time I applied for this position I was invited to do an interview with Mark and Dan and received some great criticism/advice about the code I had written which I took seriously and went back to my original code to study and improve on. Since then I improved my original code through practice and seeing what others had done. In that time I happened to be working on a personal practice project and had an idea on how to improve one section of my translator and after figuring it out in a messy way I looked for examples of others and stumbled upon what is very similar in my modernToRoman function.
-To be honest I didn't expect the challenge to be the same as last time so it didn't even occur to me that it might give me a slight edge but I don't want to write a worse function as it is what I had discovered/learned. 
+To be honest I didn't expect the challenge to be the same as last time so it didn't even occur to me that it might give me a slight edge but I don't want to write a worse function as it is what I had discovered/learned so I decided to leave it in with this explanation.
+
+If you have any questions I would be more than happy to answer them.
 
 ## Test Cases:
   ### modern -> roman Numerals:
