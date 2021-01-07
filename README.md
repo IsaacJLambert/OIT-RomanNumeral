@@ -3,9 +3,7 @@
 
 
 ## Time to complete: 
-  start: 8:38
-  end: 
-  total:  hr
+  2:10
 
 ## modernToRoman Function info:
   Last time I applied for this position I was invited to do an interview with Mark and Dan and received some great criticism/advice about the code I had written which I took seriously and went back to my original code to study and improve on. Since then I improved my original code through practice and seeing what others had done. In that time I happened to be working on a personal practice project and had an idea on how to improve one section of my translator and after figuring it out in a messy way I looked for examples of others and stumbled upon what is very similar in my modernToRoman function.
