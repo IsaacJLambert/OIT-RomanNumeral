@@ -115,7 +115,40 @@ bool verifyRoman(string userRoman) {
     }
 
     //verify that the string of roman numerals make sense(inorder, valid combinations, etc.)
-
+    for (int i = 0; i < userRoman.size(); i++) {
+        //M can be followed by anything
+        //D can't be followed by M
+        if ((userRoman.at(i) == 'D') && (i < userRoman.size() - 1)){
+            if(userRoman.at(i + 1) == 'M') {
+                return true;
+            }
+        }
+        //C can be followed by anything
+        //L can't be followed by M - D - C
+        if ((userRoman.at(i) == 'L') && (i < userRoman.size() - 1)){
+            if((userRoman.at(i + 1) == 'M') || (userRoman.at(i + 1) == 'D') || (userRoman.at(i + 1) == 'C')) {
+                return true;
+            }
+        }
+        //X can't be followed by M - D
+        if ((userRoman.at(i) == 'X') && (i < userRoman.size() - 1)){
+            if((userRoman.at(i + 1) == 'M') || (userRoman.at(i + 1) == 'D')) {
+                return true;
+            }
+        }
+        //V can't be followed by M - D - C - L - X
+        if ((userRoman.at(i) == 'V') && (i < userRoman.size() - 1)){
+            if((userRoman.at(i + 1) == 'M') || (userRoman.at(i + 1) == 'D') || (userRoman.at(i + 1) == 'C') || (userRoman.at(i + 1) == 'L') || (userRoman.at(i + 1) == 'X')) {
+                return true;
+            }
+        }
+        //I can't be followed by M - D - C - L
+        if ((userRoman.at(i) == 'I') && (i < userRoman.size() - 1)){
+            if((userRoman.at(i + 1) == 'M') || (userRoman.at(i + 1) == 'D') || (userRoman.at(i + 1) == 'C') || (userRoman.at(i + 1) == 'L')) {
+                return true;
+            }
+        }
+    }
 
     //valid input
     return false;
@@ -141,7 +174,7 @@ int main() {
                     }
                 } while(error);
                 //is a valid input so translate:
-                cout << userRoman << " in Modern numbers is: " << to_string(romanToModern(userRoman)) << endl;
+                cout << userRoman << " in Modern numbers is: " << to_string(romanToModern(userRoman)) << endl << endl;
                 break;
             case 2:
             //modern to roman numeral
@@ -162,7 +195,7 @@ int main() {
                     }
                 } while(error);
                 //is a valid input so translate:
-                cout << to_string(userModern) << " in Roman Numerals is: " << modernToRoman(userModern) << endl;
+                cout << to_string(userModern) << " in Roman Numerals is: " << modernToRoman(userModern) << endl << endl;
                 break;
             case 3:
             //exit
