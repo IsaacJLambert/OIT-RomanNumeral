@@ -6,7 +6,7 @@ using namespace std;
 int Menu() {
     cout << "++++Roman Numeral Translator++++\n 1. Roman Numeral to Modern\n 2. Modern Number to Roman Numerals\n 3. Exit \n";
     bool invalidInput;
-    int userInput;
+    int userInput = 0;
     do{
         invalidInput = false;
         try {
@@ -26,7 +26,7 @@ int Menu() {
             cout << "Invalid Input" << endl;
             invalidInput = true;
         }
-    }while(invalidInput);
+    } while(invalidInput);
 
     return userInput;
 }
@@ -61,8 +61,8 @@ int getModernNumber(char c) {
 }
 
 int romanToModern (string userInput) {
-    int num1;
-    int num2;
+    int num1 = 0;
+    int num2 = 0;
     int modernToReturn = 0;
 
     for(int i = 0; i < userInput.size(); i++) {
@@ -87,7 +87,7 @@ int romanToModern (string userInput) {
 
 string modernToRoman(int userInput) {
     //Please read the ReadMe file for info about this function
-    string romanNumber = "";
+    string romanNumber;
     string romanNumerals[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
     int modernNumbers[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
 
@@ -155,9 +155,9 @@ bool verifyRoman(string userRoman) {
 }
 
 int main() {
-    int userSelection;
+    int userSelection = 0;
     string userRoman;
-    int userModern;
+    int userModern = 0;
     bool error;
     do {
         userSelection= Menu();
